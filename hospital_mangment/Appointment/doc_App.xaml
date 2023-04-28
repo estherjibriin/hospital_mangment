@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hospital_mangment.Appointment.doc_App"
+             Title="doc_App"
+             BackgroundColor="#F9F9F9">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="FontAttributes" Value="Bold" />
+        </Style>
+
+        <Style TargetType="StackLayout">
+            <Setter Property="Spacing" Value="10" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+
+        <Style TargetType="CheckBox">
+            <Setter Property="Color" Value="#007AFF" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+
+        <Label Text="Appointments"
+               FontSize="Large"
+               Margin="10,10,10,0"
+               HorizontalOptions="Center"/>
+
+        <ScrollView>
+
+            <StackLayout>
+
+                <Label Text="Today's Appointments"
+                       FontSize="Medium"
+                       Margin="10"/>
+
+                <StackLayout x:Name="appointmentsLayout">
+                    <!-- Appointments will be dynamically added here -->
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <Button Text="Save"
+                Clicked="OnSaveClicked"
+                Margin="10,10,10,0"/>
+
+    </StackLayout>
+
+</ContentPage>

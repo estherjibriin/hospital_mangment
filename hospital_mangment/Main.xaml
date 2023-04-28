@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hospital_mangment.NewPage1"
+             Title="Hospital Managment">
+    <ScrollView>
+        <FlexLayout Direction="Row"
+             Wrap="Wrap"
+             JustifyContent="Center"
+             AlignItems="Center"
+             Padding="20"
+             AlignContent="Center">
+
+            <Frame Margin="10"
+       BackgroundColor="#B0E0E6"
+       CornerRadius="10"
+       Padding="10"
+       HeightRequest="200"
+       WidthRequest="200">
+                <StackLayout>
+                    <Label Text="Patient Management"
+               FontAttributes="Bold"
+               FontSize="18"
+               TextColor="Black"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GO_to_patient" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+
+            <Frame Margin="10"
+           BackgroundColor="#ADD8E6"
+           CornerRadius="10"
+           Padding="10"
+           HeightRequest="200"
+           WidthRequest="200">
+                <StackLayout>
+                    <Label Text="Appointment Scheduling"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GO_to_app" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame Margin="10"
+           BackgroundColor="#87CEFA"
+           CornerRadius="10"
+           Padding="10"
+           HeightRequest="200"
+           WidthRequest="200">
+                <StackLayout>
+                    <Label Text="Doctor Login"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Login"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+          
+
+            <Frame Margin="10"
+           BackgroundColor="#87CEFA"
+           CornerRadius="10"
+           Padding="10"
+           HeightRequest="200"
+           WidthRequest="200">
+                <StackLayout>
+                    <Label Text="Manage Doctor"
+                   FontAttributes="Bold"
+                   FontSize="18"
+                   TextColor="Black"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center" />
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GO_to_doctor" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+        </FlexLayout>
+
+    </ScrollView>
+</ContentPage>

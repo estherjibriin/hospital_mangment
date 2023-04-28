@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hospital_mangment.Doctors.manage_doctor"
+             Title="manage_doctor">
+    <StackLayout>
+        <Label Text="Doctor List" FontSize="Large" TextColor="White" Margin="10"/>
+        <ListView ItemsSource="{Binding Doctors}" SelectedItem="{Binding Doctor}" ItemSelected="OnDoctorSelected">
+            <ListView.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="ID" />
+                    <Label Grid.Column="1" Text="Name" />
+                    <Label Grid.Column="2" Text="Specialty" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="1*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Id}" />
+                            <Label Grid.Column="1" Text="{Binding Name}" />
+                            <Label Grid.Column="2" Text="{Binding Specialty}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Button Text="Add Doctor" Clicked="AddDoctor_Clicked" Margin="10" />
+            <Button Text="Update Doctor" Clicked="UpdateDoctor_Clicked" Margin="10" />
+            <Button Text="Remove Doctor" Clicked="RemoveDoctor_Clicked" Margin="10" />
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
